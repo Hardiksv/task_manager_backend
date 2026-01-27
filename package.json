@@ -5,7 +5,7 @@
   "main": "src/server.ts",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "tsc",
+     "build": "prisma generate && next build",
     "start": "nodemon src/server.ts"
   },
   "keywords": [],
