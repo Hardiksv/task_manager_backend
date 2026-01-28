@@ -16,6 +16,9 @@ app.use("/tasks", task_routes_1.default);
 app.get("/health", (_req, res) => {
     res.status(200).json({ status: "OK" });
 });
+app.get("/", (_req, res) => {
+    res.status(200).json({ status: "API WORKING OK" });
+});
 app.get("/protected", auth_middleware_1.authenticate, (req, res) => {
     res.json({
         message: "You are authenticated",
